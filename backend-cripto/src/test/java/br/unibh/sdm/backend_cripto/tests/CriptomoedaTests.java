@@ -62,20 +62,16 @@ public class CriptomoedaTests {
 		@Value("${amazon.aws.secretkey}")
 		private String amazonAWSSecretKey;
 
-		public AWSCredentialsProvider amazonAWSCredentialsProvider() {
-			return new AWSStaticCredentialsProvider(amazonAWSCredentials());
-		}
-
-		@Bean
-		public AWSCredentials amazonAWSCredentials() {
-			return new BasicAWSCredentials(amazonAWSAccessKey, amazonAWSSecretKey);
-		}
-
-		@Bean
-		public AmazonDynamoDB amazonDynamoDB() {
-			return AmazonDynamoDBClientBuilder.standard().withCredentials(amazonAWSCredentialsProvider())
-					.withRegion(Regions.US_EAST_1).build();
-		}
+		public AWSCredentialsProvider amazonAWSCredentialsProvider() { return new
+		AWSStaticCredentialsProvider(amazonAWSCredentials()); }
+		
+		@Bean public AWSCredentials amazonAWSCredentials() { return new
+		BasicAWSCredentials(amazonAWSAccessKey, amazonAWSSecretKey); }
+		
+		@Bean public AmazonDynamoDB amazonDynamoDB() { return
+		AmazonDynamoDBClientBuilder.standard().withCredentials(
+		amazonAWSCredentialsProvider()) .withRegion(Regions.US_EAST_1).build(); }
+		
 	}
     
 	@Autowired
