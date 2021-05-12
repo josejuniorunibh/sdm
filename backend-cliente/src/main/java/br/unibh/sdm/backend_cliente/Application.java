@@ -8,7 +8,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
- * Classe executavel que inicia a aplicacao Spring Boot
+ * Classe executavel que inicia a aplicacao Spring Boot de Cliente
  * @author jhcru
  *
  */
