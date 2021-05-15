@@ -27,12 +27,14 @@ import br.unibh.sdm.backend_cliente.persistencia.ClienteRepository;
  * Neste diretoio, criar um arquivo application.properties contendo as seguitnes variaveis:
  * <br>
  * # Connection parameters<br>
- * spring.datasource.url= jdbc:postgresql://HOST:5432/DBNAME<br>
+ * spring.datasource.url=jdbc:postgresql://HOST:5432/DBNAME<br>
  * spring.datasource.username=USER<br>
  * spring.datasource.password=PASSWORD<br>
  * <br>
  * spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true<br>
- * spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect<br>
+ * spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect<br>
+ * spring.jpa.properties.hibernate.show_sql=true<br>
+ * spring.jpa.properties.hibernate.format_sql=false<br>
  * <br>
  * # Hibernate ddl auto (create, create-drop, validate, update)<br>
  * spring.jpa.hibernate.ddl-auto=create<br>
