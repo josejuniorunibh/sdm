@@ -1,7 +1,6 @@
 package br.unibh.sdm.backend_cripto.persistencia;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
@@ -14,7 +13,7 @@ import br.unibh.sdm.backend_cripto.entidades.Cotacao;
  *
  */
 @EnableScan()
-public interface CotacaoRepository extends CrudRepository<Cotacao, UUID> {
+public interface CotacaoRepository extends CrudRepository<Cotacao, String> {
 	
 	List<Cotacao> findByCodigo(String codigo);
 	
